@@ -19,7 +19,7 @@ export class TodoApiService {
     return this.http.get<ToDoItem>(`${BaseUrl}/${id}`);
   }
   delete(id: number): Observable<void> {
-    return this.http.delete<void>(`${BaseUrl}/${id}`);
+    return this.http.delete<void>(`${BaseUrl}/?id=${id}`);
   }
 
 

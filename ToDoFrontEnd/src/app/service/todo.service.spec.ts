@@ -67,7 +67,7 @@ describe('TodoService', () => {
     // when
     service.delete(todoItem.id);
     // then
-    expect(httpclient.delete).toHaveBeenCalledWith(`https://localhost:5001/ToDos/${todoItem.id}`);
+    expect(httpclient.delete).toHaveBeenCalledWith(`https://localhost:5001/ToDos/?id=${todoItem.id}`);
   });
 
 });
